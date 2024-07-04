@@ -287,6 +287,7 @@ img {
 .mfp-with-zoom.mfp-bg {
   opacity: 0;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
@@ -1860,7 +1861,6 @@ img {
 
 .header-style-1 .search-contact > div, .header-style-2 .search-contact > div, .header-style-3 .search-contact > div {
   display: inline-block;
-  float: left;
 }
 
 .header-style-1 .search-contact .header-search-area, .header-style-2 .search-contact .header-search-area, .header-style-3 .search-contact .header-search-area {
@@ -2808,7 +2808,6 @@ img {
 
 .site-footer .lower-footer .extra-link {
   display: inline-block;
-  float: right;
   overflow: hidden;
 }
 
@@ -6999,7 +6998,6 @@ img {
 .shop-single-section .product-details .product-option .product-row > div {
   height: 35px;
   display: inline-block;
-  float: left;
 }
 
 .shop-single-section .product-details .product-option .product-row > div + div {
