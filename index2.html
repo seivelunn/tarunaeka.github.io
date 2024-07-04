@@ -1,0 +1,203 @@
+<style>
+.container { background-color: #fff; display: flex; padding-bottom: 25px; flex-direction: column; }
+.hero-section { display: flex; flex-direction: column; overflow: hidden; position: relative; min-height: 952px; width: 100%; }
+@media (max-width: 991px) { .hero-section { max-width: 100%; } }
+.hero-image { position: absolute; inset: 0; height: 100%; width: 100%; object-fit: cover; object-position: center; }
+.nav-wrapper { position: relative; background-color: rgba(48, 51, 78, 0.5); display: flex; width: 100%; align-items: center; gap: 20px; padding: 25px 80px; }
+@media (max-width: 991px) { .nav-wrapper { max-width: 100%; flex-wrap: wrap; padding: 0 20px; } }
+.logo-container { align-self: stretch; flex-grow: 1; flex-basis: auto; }
+@media (max-width: 991px) { .logo-container { max-width: 100%; } }
+.logo-wrapper { gap: 20px; display: flex; }
+@media (max-width: 991px) { .logo-wrapper { flex-direction: column; align-items: stretch; gap: 0; } }
+.logo-image { aspect-ratio: 1.89; object-fit: auto; object-position: center; width: 100%; flex-grow: 1; }
+@media (max-width: 991px) { .logo-image { margin-top: 14px; } }
+.company-name { color: #fff; align-self: stretch; margin: auto 0; font: 600 36px/35px Poppins, sans-serif; }
+@media (max-width: 991px) { .company-name { margin-top: 40px; } }
+.nav-link { color: #fff; align-self: stretch; margin: auto 0; font: 600 24px Poppins, sans-serif; }
+.nav-link-active { text-decoration-line: underline; }
+.nav-menu { align-self: stretch; display: flex; gap: 20px; font-size: 24px; color: #fff; font-weight: 600; margin: auto 0; }
+@media (max-width: 991px) { .nav-menu { flex-wrap: wrap; } }
+.nav-item { font-family: Poppins, sans-serif; flex-grow: 1; }
+.hero-content { position: relative; align-self: center; z-index: 10; display: flex; width: 100%; max-width: 1662px; align-items: flex-start; gap: 20px; justify-content: space-between; margin: 131px 0 -101px; }
+@media (max-width: 991px) { .hero-content { max-width: 100%; flex-wrap: wrap; margin: 40px 0 10px; } }
+.hero-text { align-self: end; display: flex; margin-top: 94px; flex-direction: column; }
+@media (max-width: 991px) { .hero-text { max-width: 100%; margin-top: 40px; } }
+.icon { aspect-ratio: 0.56; object-fit: auto; object-position: center; width: 70px; fill: #fff; margin-left: 17px; }
+@media (max-width: 991px) { .icon { margin-left: 10px; } }
+.text-container { display: flex; margin-top: 49px; width: 100%; gap: 20px; justify-content: space-between; }
+@media (max-width: 991px) { .text-container { max-width: 100%; flex-wrap: wrap; margin-top: 40px; } }
+.text-box { background-color: rgba(48, 51, 78, 0.9); display: flex; flex-direction: column; align-items: start; color: #fff; font-weight: 600; padding: 72px 45px; }
+@media (max-width: 991px) { .text-box { max-width: 100%; padding: 0 20px; } }
+.main-title { margin-top: 18px; font: 36px Poppins, sans-serif; }
+.description { margin-top: 162px; font: 13px Poppins, sans-serif; }
+@media (max-width: 991px) { .description { margin-top: 40px; } }
+.slider-dots { align-self: end; display: flex; margin-top: 326px; align-items: center; gap: 4px; padding: 0 20px; }
+@media (max-width: 991px) { .slider-dots { margin-top: 40px; } }
+.dot { border-radius: 50%; align-self: stretch; width: 18px; height: 18px; margin: auto 0; }
+.dot-inactive { background-color: #d9d9d9; }
+.dot-active { background-color: #b43030; width: 22px; height: 22px; }
+.hero-image-small { aspect-ratio: 0.96; object-fit: auto; object-position: center; width: 300px; align-self: start; max-width: 100%; }
+.services-section { background-color: #b43030; display: flex; width: 100%; align-items: center; justify-content: center; padding: 71px 60px; }
+@media (max-width: 991px) { .services-section { max-width: 100%; padding: 0 20px; } }
+.services-container { display: flex; margin-top: 185px; width: 100%; max-width: 1510px; flex-direction: column; }
+@media (max-width: 991px) { .services-container { max-width: 100%; margin-top: 40px; } }
+.services-title { color: #fff; text-align: center; align-self: center; font: 600 64px/103% Poppins, sans-serif; }
+@media (max-width: 991px) { .services-title { font-size: 40px; } }
+.services-grid { margin-top: 99px; }
+@media (max-width: 991px) { .services-grid { max-width: 100%; margin-top: 40px; } }
+.services-row { gap: 20px; display: flex; }
+@media (max-width: 991px) { .services-row { flex-direction: column; align-items: stretch; gap: 0; } }
+.service-image { aspect-ratio: 1.18; object-fit: auto; object-position: center; width: 100%; border-radius: 55px; flex-grow: 1; }
+@media (max-width: 991px) { .service-image { max-width: 100%; margin-top: 40px; } }
+.clients-section { color: #b43030; text-align: center; align-self: center; margin-top: 48px; font: 600 64px/103% Poppins, sans-serif; }
+@media (max-width: 991px) { .clients-section { margin-top: 40px; font-size: 40px; } }
+.clients-container { align-self: center; margin-top: 102px; width: 100%; max-width: 1512px; padding: 0 20px; }
+@media (max-width: 991px) { .clients-container { max-width: 100%; margin-top: 40px; } }
+.clients-grid { gap: 20px; display: flex; }
+@media (max-width: 991px) { .clients-grid { flex-direction: column; align-items: stretch; gap: 0; } }
+.client-column { display: flex; flex-direction: column; font-weight: 600; }
+@media (max-width: 991px) { .client-column { max-width: 100%; margin-top: 40px; } }
+.client-category { color: #b43030; text-align: center; font: 36px/183% Poppins, sans-serif; }
+@media (max-width: 991px) { .client-category { max-width: 100%; } }
+.client-list { color: #787878; margin-top: 39px; font: 24px Poppins, sans-serif; }
+@media (max-width: 991px) { .client-list { max-width: 100%; } }
+.footer { background-color: #2e2f31; display: flex; margin-top: 311px; width: 100%; align-items: center; justify-content: center; padding: 80px 60px; }
+@media (max-width: 991px) { .footer { max-width: 100%; margin-top: 40px; padding: 0 20px; } }
+.footer-content { display: flex; margin-top: 16px; width: 100%; max-width: 1524px; gap: 20px; }
+@media (max-width: 991px) { .footer-content { max-width: 100%; flex-wrap: wrap; } }
+.footer-logo { flex-grow: 1; flex-basis: auto; margin: auto 0; }
+@media (max-width: 991px) { .footer-logo { max-width: 100%; } }
+.footer-logo-wrapper { gap: 20px; display: flex; }
+@media (max-width: 991px) { .footer-logo-wrapper { flex-direction: column; align-items: stretch; gap: 0; } }
+.footer-logo-image { aspect-ratio: 1.89; object-fit: auto; object-position: center; width: 100%; flex-grow: 1; }
+@media (max-width: 991px) { .footer-logo-image { margin-top: 12px; } }
+.footer-company-info { display: flex; flex-direction: column; align-self: stretch; color: #fff; margin: auto 0; }
+@media (max-width: 991px) { .footer-company-info { max-width: 100%; margin-top: 39px; } }
+.footer-company-name { font: 600 45px/78% Poppins, sans-serif; }
+@media (max-width: 991px) { .footer-company-name { max-width: 100%; font-size: 40px; } }
+.footer-company-description { margin-top: 19px; font: 500 16px Poppins, sans-serif; }
+@media (max-width: 991px) { .footer-company-description { max-width: 100%; } }
+.footer-contact { color: #fff; flex-grow: 1; flex-basis: auto; font: 600 24px Poppins, sans-serif; }
+@media (max-width: 991px) { .footer-contact { max-width: 100%; } }
+.copyright { color: #787878; align-self: center; margin-top: 30px; font: 500 24px/333% Poppins, sans-serif; }
+@media (max-width: 991px) { .copyright { max-width: 100%; } }
+</style>
+
+<div class="container">
+  <section class="hero-section">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f17a8292a2fe378f37065f146f1e9ef3ed711408ee378e1d0ec42d84481bb243?apiKey=2ea6879027cb40c98c91e1f01bc87252&" alt="Hero background" class="hero-image" />
+    <nav class="nav-wrapper">
+      <div class="logo-container">
+        <div class="logo-wrapper">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/57373a626aec98edb496fe8646c94c15658d171a1f74746d82ee2ebf415fec38?apiKey=2ea6879027cb40c98c91e1f01bc87252&" alt="Company logo" class="logo-image" />
+          <h1 class="company-name">PT. TARUNA <br /> EKA SETIA</h1>
+        </div>
+      </div>
+      <a href="#" class="nav-link nav-link-active">HOME</a>
+      <a href="#" class="nav-link">PROFIL</a>
+      <div class="nav-menu">
+        <a href="#" class="nav-item">SEWA DAN RENTAL</a>
+        <a href="#" class="nav-item">SERVICE</a>
+        <a href="#" class="nav-item">CONTACT PERSON</a>
+      </div>
+    </nav>
+    <div class="hero-content">
+      <div class="hero-text">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/381c1df0d654eefea361c5d52035c8e409d58e25dfdb5d9f9444f8379a85bb69?apiKey=2ea6879027cb40c98c91e1f01bc87252&" alt="Decorative icon" class="icon" />
+        <div class="text-container">
+          <div class="text-box">
+            <h2 class="main-title">SERVE <br /> RENTAL AND SERVICE <br /> BOILERS</h2>
+            <p class="description">We provide boiler service and rental, with <br /> satisfactory service as well as adequate facilities.</p>
+          </div>
+          <div class="slider-dots">
+            <span class="dot dot-inactive"></span>
+            <span class="dot dot-active"></span>
+            <span class="dot dot-inactive"></span>
+          </div>
+        </div>
+      </div>
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c164848fd8c1b35cb2a8786ac29d3dd934e644763bed745f54c65fb8c0bb169a?apiKey=2ea6879027cb40c98c91e1f01bc87252&" alt="Decorative image" class="hero-image-small" />
+    </div>
+  </section>
+  <section class="services-section">
+    <div class="services-container">
+      <h2 class="services-title">Our service</h2>
+      <div class="services-grid">
+        <div class="services-row">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3b01d07715bea7bd8cb2ae956ccc91cdbdc475f9e6ea2aca70b5cb082f65112d?apiKey=2ea6879027cb40c98c91e1f01bc87252&" alt="Service 1" class="service-image" />
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c26584cb73d66625f9998b92e6f1de4dd306443061da879c952f49c2e86a9c5c?apiKey=2ea6879027cb40c98c91e1f01bc87252&" alt="Service 2" class="service-image" />
+        </div>
+        <div class="services-row">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9c8a1c6dde7d40d521ad450671cb3efd2952b9f0a0823f658560123af0ff592d?apiKey=2ea6879027cb40c98c91e1f01bc87252&" alt="Service 3" class="service-image" />
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/08250a24ff7e11341cb3340d7cfbfcd738f5a6c91c04e63fb0a7ba5ee791a83d?apiKey=2ea6879027cb40c98c91e1f01bc87252&" alt="Service 4" class="service-image" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <h2 class="clients-section">Our Clients</h2>
+  <div class="clients-container">
+    <div class="clients-grid">
+      <div class="client-column">
+        <h3 class="client-category">SKK-Migas Company</h3>
+        <ul class="client-list">
+          <li>PT Patra Badak Arun Solusi</li>
+          <li>PT Odira Energy Karang Agung</li>
+          <li>PT Wastec</li>
+          <li>PT Tracon Industry</li>
+          <li>PT Elnusa Petrofin</li>
+          <li>PT Halliburton – Exxon Cepu Project</li>
+          <li>PT Prima Sentra Usaha</li>
+        </ul>
+      </div>
+      <div class="client-column">
+        <h3 class="client-category">Hotel</h3>
+        <ul class="client-list">
+          <li>Four points by Sheraton Hotel</li>
+          <li>Rimba Papua Hotel</li>
+          <li>PT Berkah Rezeki Abadi</li>
+          <li>Hotel Grand Cakra</li>
+          <li>Hotel Jayakarta</li>
+          <li>Shangrilla Hotel</li>
+          <li>Hotel Intercontinental</li>
+          <li>Hotel Verwood</li>
+        </ul>
+      </div>
+      <div class="client-column">
+        <h3 class="client-category">Private companies</h3>
+        <ul class="client-list">
+          <li>PT Tirta Investama</li>
+          <li>PT Mitra Tani Dua Tujuh</li>
+          <li>PT Maxima Energi Indokemika</li>
+          <li>PT Wonokoyo Jaya Corporindo</li>
+          <li>PT Suprabakti Mandiri</li>
+          <li>PT Cargill Indonesia</li>
+          <li>PT Aliet Green</li>
+          <li>PT Prasada Samya Mukti</li>
+          <li>PT Ciomas Adisatwa</li>
+          <li>PT Balatif</li>
+          <li>DLL,</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <div class="footer-logo-wrapper">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/57373a626aec98edb496fe8646c94c15658d171a1f74746d82ee2ebf415fec38?apiKey=2ea6879027cb40c98c91e1f01bc87252&" alt="Company logo" class="footer-logo-image" />
+          <div class="footer-company-info">
+            <h2 class="footer-company-name">PT. TARUNA EKA SETIA</h2>
+            <p class="footer-company-description">RENTAL, SERVICE AND SALES OF INDUSTRIAL BOILERS</p>
+          </div>
+        </div>
+      </div>
+      <address class="footer-contact">
+        <strong>PT. Taruna Eka Setia</strong><br />
+        031-51908240<br />
+        Perum Permata Siwalan Indah G5 No.11.<br />
+        Siwalan Panji – buduran Sidoarjo<br />
+      </address>
+    </div>
+  </footer>
+  <p class="copyright">Copyright ©2024 PT.Taruna Eka Setia</p>
+</div>
