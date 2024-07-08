@@ -118,7 +118,7 @@ body {
 }
 
 p {
-  color: #ffffff;
+  color: #000000;
   line-height: 1.8em;
 }
 
@@ -5315,10 +5315,6 @@ img {
   margin-bottom: 1.3em;
 }
 
-.portfolio-sigle-section .project-info ul {
-  list-style: none;
-}
-
 .portfolio-sigle-section .project-info ul > li:last-child {
   margin-bottom: 0;
   padding-bottom: 0;
@@ -5333,6 +5329,7 @@ img {
 }
 
 .portfolio-sigle-section .project-info li span {
+  list-style: square;
   font-weight: 600;
   color: #333;
   min-width: 100px;
@@ -5378,6 +5375,7 @@ img {
 
 .portfolio-sigle-section .content-area p {
   margin-bottom: 1.7em;
+  text-align: justify;
 }
 
 .portfolio-sigle-section .challange-solution-section > div + div {
@@ -5529,7 +5527,7 @@ img {
 }
 
 .portfolio-sigle-section .prev-next-project a:hover h5 {
-  color: #fd5f17;
+  color: #b43030;
 }
 
 /*--------------------------------------------------------------
